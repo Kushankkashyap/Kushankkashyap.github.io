@@ -51,9 +51,12 @@
   .hero-loc{margin-top:26px;font-size:0.85rem;color:var(--ink-soft);}
   .hero-loc .dot{color:var(--gold);margin:0 8px;}
 
-  .chart-box{position:relative;padding-bottom:8px;}
-  .chart-box svg{width:100%;height:auto;display:block;}
-  .chart-box .cap{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--ink-soft);margin-top:8px;display:flex;justify-content:space-between;}
+  .chart-box{position:relative;padding:24px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.7);box-shadow:0 18px 50px rgba(19,34,52,0.06);}
+  .workflow-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:.08em;color:var(--gold);margin-bottom:16px;}
+  .workflow-step{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);}
+  .workflow-step span{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--gold);}
+  .workflow-step strong{font-size:.94rem;font-weight:500;}
+  .workflow-note{font-size:.82rem;color:var(--ink-soft);margin-top:16px;}
   @media (max-width:720px){
     .hero-grid{grid-template-columns:1fr;}
     .hero-grid h1{font-size:2.2rem;}
@@ -127,31 +130,26 @@
   <div class="wrap hero-grid">
     <div>
       <h1>Data that leads to a <em>decision</em>, not just a chart.</h1>
-      <p class="hero-sub"><strong>Data & Business Analyst</strong> with 4+ years across SQL, Power BI, and US Healthcare RCM analytics — turning raw claims and operations data into dashboards leadership actually uses.</p>
-      <div class="hero-loc">Delhi NCR<span class="dot">·</span>Open to remote & Bengaluru<span class="dot">·</span>Available immediately</div>
+      <p class="hero-sub"><strong>Data & Business Analyst</strong> with 3+ years across US Healthcare RCM, reporting and business analysis. I use SQL, Power BI and DAX to turn operational data into clear, decision-support reporting.</p>
+      <div class="hero-loc">India<span class="dot">·</span>SQL Server<span class="dot">·</span>Power BI & Healthcare RCM</div>
     </div>
-    <div class="chart-box">
-      <svg viewBox="0 0 300 140" preserveAspectRatio="none">
-        <polyline points="0,120 40,108 80,112 120,80 160,86 200,50 240,58 300,18"
-          fill="none" stroke="#BE8A3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-          stroke-dasharray="420" stroke-dashoffset="420">
-          <animate attributeName="stroke-dashoffset" from="420" to="0" dur="1.6s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/>
-        </polyline>
-        <circle cx="300" cy="18" r="4.5" fill="#BE8A3D">
-          <animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="0.3s" fill="freeze"/>
-        </circle>
-      </svg>
-      <div class="cap"><span>FY22</span><span>Billing accuracy trend</span><span>FY24</span></div>
+    <div class="chart-box workflow-card">
+      <div class="workflow-kicker">ANALYTICS WORKFLOW</div>
+      <div class="workflow-step"><span>01</span><strong>Business question</strong></div>
+      <div class="workflow-step"><span>02</span><strong>SQL & data validation</strong></div>
+      <div class="workflow-step"><span>03</span><strong>Metrics & data model</strong></div>
+      <div class="workflow-step"><span>04</span><strong>Power BI & insight</strong></div>
+      <div class="workflow-note">A transparent path from raw data to a decision.</div>
     </div>
   </div>
 </header>
 
 <div class="impact">
   <div class="wrap">
-    <div class="stat"><div class="num">25%</div><div class="label">Billing accuracy improvement</div></div>
-    <div class="stat"><div class="num">30%</div><div class="label">Manual reporting effort cut</div></div>
-    <div class="stat"><div class="num">50K+</div><div class="label">Claims records analyzed</div></div>
-    <div class="stat"><div class="num">20+</div><div class="label">DAX measures per dashboard</div></div>
+    <div class="stat"><div class="num">SQL</div><div class="label">Querying, validation and analytical views</div></div>
+    <div class="stat"><div class="num">BI</div><div class="label">Power BI dashboards and DAX measures</div></div>
+    <div class="stat"><div class="num">RCM</div><div class="label">Claims, denials and AR aging analytics</div></div>
+    <div class="stat"><div class="num">E2E</div><div class="label">Business question through insight delivery</div></div>
   </div>
 </div>
 
@@ -165,15 +163,15 @@
     <div class="job">
       <div class="job-head">
         <h3>Business Analyst — Data & Reporting</h3>
-        <span class="period">Jul 2022 – Dec 2024</span>
+        <span class="period">Jul 2022 – May 2024</span>
       </div>
       <div class="company">Pacifence Solutions Pvt Ltd · US Healthcare RCM · Remote</div>
       <ul>
-        <li>Analyzed 50K+ healthcare claims using SQL (CTEs, window functions, joins) to identify denial trends and revenue leakage, improving billing accuracy by 25%.</li>
-        <li>Built 5-page interactive Power BI dashboards with 20+ DAX measures tracking claims performance, AR aging, denial rates, and team productivity for leadership reporting.</li>
+        <li>Used SQL-based analysis and reporting to investigate claim trends, denial patterns and operational performance across the healthcare revenue cycle.</li>
+        <li>Developed Power BI reporting for claims performance, denial trends, AR aging and operational KPIs to support clearer business reviews.</li>
         <li>Translated business requirements into data models, KPI frameworks, and dashboard specs through structured requirement gathering.</li>
         <li>Designed star schema data models in Power BI for scalable, accurate reporting across business units.</li>
-        <li>Automated end-to-end reporting pipelines using SQL, Power Query, and Excel, saving 4+ hours weekly.</li>
+        <li>Improved reporting workflows using SQL, Power Query and Excel, with an emphasis on consistent definitions and repeatable outputs.</li>
       </ul>
     </div>
 
@@ -210,7 +208,7 @@
         <h3>ProfitTrace — E-Commerce Profitability</h3>
         <div class="stack">SQL Server · Power BI · DAX</div>
         <p>An end-to-end pipeline from Excel source data through SQL Server staging to a 4-page decision dashboard, flagging high-revenue, low-margin products.</p>
-        <a href="https://github.com/Kushankkashyap" target="_blank" rel="noopener">View on GitHub →</a>
+        <a href="https://github.com/Kushankkashyap/ProfitTrace" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <div class="proj">
         <h3>HR People Analytics Dashboard</h3>
@@ -270,7 +268,6 @@
     <div class="contact-row">
       <div class="contact-links">
         <a href="mailto:kushkashyap87@gmail.com">Email</a>
-        <a href="tel:+919871595357">Call</a>
         <a href="https://linkedin.com/in/kushankkashyap" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/Kushankkashyap" target="_blank" rel="noopener">GitHub</a>
       </div>
